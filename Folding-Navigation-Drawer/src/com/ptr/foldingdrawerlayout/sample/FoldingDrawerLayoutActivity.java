@@ -71,8 +71,8 @@ import com.ptr.foldingdrawerlayout.sample.R;
  * overlay on top of the current content data Is here.
  * </p>
  */
-public class FoldingDrawerLayoutActivity extends ActionBarActivity {
-
+public class FoldingDrawerLayoutActivity extends ActionBarActivity 
+{
 	private FoldingDrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
