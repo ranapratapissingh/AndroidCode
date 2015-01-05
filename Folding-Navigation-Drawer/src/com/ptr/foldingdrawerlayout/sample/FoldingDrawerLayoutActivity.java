@@ -76,13 +76,12 @@ public class FoldingDrawerLayoutActivity extends ActionBarActivity
 	private FoldingDrawerLayout mDrawerLayout;
 	private ListView mDrawerList;
 	private ActionBarDrawerToggle mDrawerToggle;
-
+	boolean test=true;
 	private CharSequence mDrawerTitle;
 	private CharSequence mTitle;
 	private String[] mAnimalTitles;
 
 	private ItemSelectedListener mItemSelectedListener;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
