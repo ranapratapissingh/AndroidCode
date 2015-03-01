@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+
+
+<script type="text/javascript">
+		var counter = 2;
+
+    $("#addButton").click(function () {
+
+    if(counter>10){
+            alert("Only 10 textboxes allow");
+            return false;
+    }   
+
+    var newTextBoxDiv = $(document.createElement('div'))
+         .attr("class", 'TextBoxDiv');
+
+    newTextBoxDiv.after().html('<div class="form-group">' + 
+         '<div class="col-md-10 add-answer">' + '<input class="form-control" type="text" name="textbox' + counter + 
+          '" placeholder="type your option" id="textbox' + counter + '" value="" >' + '</div>' + '<div class="col-md-1" style="padding-left:0px;">' + '<i class="fa fa-times-circle remv-answer" style="line-height:34px; color:#f1433e; font-size:18px;"></i>' + '</div> ' + '</div>' + '<div style="clear:both;"></div>');
+
+    newTextBoxDiv.appendTo(".TextBoxesGroup");
+
+
+    counter++;
+     });
+
+     $("#removeButton").click(function () {
+    if(counter==2){
+		//$('#removeButton').hide();
+          alert("No more textbox to remove");
+          return false;
+       }   
+
+    counter--;
+
+        $("#TextBoxDiv" + counter).remove();
+
+     });
+</script>
+</head>
+
+<body>
+</body>
+</html>

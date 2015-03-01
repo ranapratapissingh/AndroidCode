@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Search</title>
+<link rel="stylesheet" type="text/css" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.right-inner-addon {
+position: relative;
+}
+
+.right-inner-addon input{border-radius: 0px; height: 38px;}
+.right-inner-addon i{
+	position: absolute;
+right: 15px;
+padding: 12px 21px;
+pointer-events: none;
+background: #718FCB;
+color:#fff;
+}
+
+h2{text-shadow: 2px 2px #000;}
+
+</style>
+</head>
+
+<body>
+
+<nav class="is-sticky" style="position: fixed; top: 0px;">
+      <div id="menu" class="nav-collapse">
+        <ul class="nav nav-mobile open">
+            <li><a href="http://cecchi.net/#azienda" class="smoothScroll"><span>Azienda</span></a></li>
+            <li><a href="http://cecchi.net/#vini" class="smoothScroll"><span>Vini</span></a></li>
+            <li><a href="http://cecchi.net/#family-estates" class="smoothScroll"><span>Family Estates</span></a></li>
+            <li class="logo"><a href="#intro" class="smoothScroll"><img src="http://cecchi.net/wp-content/themes/cecchi/assets/img/logo-cecchi.jpg"></a></li>
+            <li><a href="http://cecchi.net/rassegna-stampa/"><span>Rassegna Stampa</span></a></li>
+            <li><a href="http://cecchi.net/#storie" class="smoothScroll"><span>Storie</span></a></li>
+            <li><a href="http://cecchi.net/#contatti" class="smoothScroll"><span>Contatti</span></a></li>
+            <!-- <li id="search-box-content-full"> -->
+            <li class="serv"><ul id="qts-lang-menu" class="qts-lang-menu">
+<li class="current-menu-item"><a href="http://cecchi.net?lang=it" hreflang="it">Italiano</a></li>
+<li class="last-child"><a href="http://cecchi.net/?lang=en" hreflang="en">English</a></li>
+</ul>
+</li>
+        </ul>           
+      </div>
+       
+	</nav>
+
+
+<div class="container">
+	<div class="row">
+		<div class="search_stry_bx">
+			<div class="col-sm-6 col-sm-offset-3" style="text-align:center; color:#fff;"><h2>💽 😃because EVERY STORY matter</h2></div>
+			<div class="form-group">
+	            <div class="col-sm-6 col-sm-offset-3 right-inner-addon"><i class="fa fa-search"></i> <!-- <span>Search Story</span> -->
+	              <input type="search" class="form-control" placeholder="Start With whatever in your mind.">
+	            </div>
+	        </div>
+	    </div>
+<!-- <div class="input-group">
+  <input type="text" class="form-control">
+  <span class="input-group-addon"><i class="fa fa-search"></i></span>
+</div>-->
+</div>
+</div>
+
+
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+<a class="btn btn-block btn-social btn-facebook" style="color: #fff;background-color: #3b5998;border-color: rgba(0,0,0,0.2);">
+            <i class="fa fa-facebook"></i> Sign in with Facebook
+          </a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>

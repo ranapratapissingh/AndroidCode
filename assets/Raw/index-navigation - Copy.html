@@ -1,0 +1,858 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>evrystry.com</title>
+ <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+ <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
+ <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<!-- mmenu -->
+<!-- <link href="css/mmenu/jquery.mmenu.all.css" rel="stylesheet" type="text/css" />
+<link href="css/mmenu/jquery.mmenu.widescreen.css" rel="stylesheet" type="text/css" />
+<link href="css/mmenu/layout.css" rel="stylesheet" type="text/css" />
+<link href="css/mmenu/normalize.css" rel="stylesheet" type="text/css" />
+<script src="js/layout.js" type="text/javascript"></script>
+<script type="text/javascript" src="js/jquery.mmenu.min.all.js"></script> -->
+ <!-- mmenu -->
+ <link href="css/autocomplete.css" rel="stylesheet" type="text/css" />
+ 	<!--<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />-->
+<!--Autocomplete-->
+   <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/style.css">
+<!--Autocomplete-->
+ <link href="css/evrystry1.css" rel="stylesheet" type="text/css" />
+ <!-- -->
+    <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+ <!-- -->
+<noscript>
+    <link rel="stylesheet" type="text/css" href="css/fallback.css" />
+</noscript>
+<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/fallback.css" />
+<![endif]-->
+
+ <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+   <style type="text/css">
+   html{
+	  overflow:scroll; 
+	   }
+    /*.share_widget ul li a{color:#fff; font-size:60px;}
+	.share_widget ul li a i{line-height:72px;}
+	.share_widget ul li {width:118px; text-align:center;}*/
+	.share_widget {padding-left:5px;}
+	.share_widget ul li a i{font-size:20px;line-height:42px;}
+	.share_widget ul li a{text-decoration:none;}
+	.share_widget ul li {text-align:center;}
+.search_stry_bx{position: absolute;left: 0px;right: 0px;z-index: 1000; top:0; bottom:0; margin:auto; height:91px;}
+.right-inner-addon {
+position: relative;
+}
+
+body{overflow-x: hidden; }
+
+.right-inner-addon input{border-radius: 0px; height: 38px;}
+.right-inner-addon i{
+	position: absolute;
+	/*right: 15px;
+	padding: 12px 21px;*/
+	right: -40px;
+	padding: 11.4px 21px;
+	pointer-events: none;
+	background: #718FCB;
+	color:#fff;
+}
+
+.modal-header{
+	border-bottom:none;
+	}
+/*#ri-grid ul li a{ -webkit-filter: blur(0.8px); -moz-filter: blur(2px); -o-filter: blur(2px); -ms-filter: blur(2px); filter: blur(2px); }*/
+.modal-body {
+position: relative;
+padding: 20px 20px 45px;
+}
+
+.facebook_btn{/*width: 78px;*/
+font-weight: bold;
+font-size: 15px;
+color: #fff;
+text-align: center;
+/*float: right;*/
+height: 23px;
+
+line-height: 20px}
+
+.facebook_icon{float: left;padding: 4px 7px 4px 7px;font-size:14px; color:#FFF; border-right: 1px solid #00007e;}
+/*.user_icon div{height:24px; width: 30px;overflow: hidden;}*/
+/*.user_icon img{width:100%;}*/
+/*.fb_create_Story_width ul li{display: table-cell;vertical-align: middle;}*/
+/*.evry_user_dropdown li{display:inline-block !important;}*/
+
+.open_div{position:fixed; left: 80%; z-index: 999; width:100%;transition: all 250ms ease-in-out;}
+/*.navbar-default{transition: left 0.1s ease-in-out;}*/
+.whole-doc{transition: all 250ms ease-in-out;}
+.hidden_div{margin:0px; padding:0px; height:100%; max-width:80%; overflow-y:scroll; overflow-x:hidden; z-index:9999999; position:fixed; left:-80%; top:0; transition: all 250ms ease-in-out;}
+.opendiv{left:0;display: block; transition: all 250ms ease-in-out;}
+
+.list-group.navigation a.list-group-item{padding: 8.3px 15px;}
+.create_story_xs{font-size:19px;border-radius: 0px;
+padding: 5px 15px;
+padding-bottom: 7px;
+}
+
+.create_story_xs{color:#000;}
+.category_title_xs{font-size: 17px;
+background-color: #718FC8;
+padding-top: 10px;
+padding-bottom: 10px;
+clear: both;
+padding-right: 0px;
+width: 100%;
+padding-left: 15px;
+border-left: 1px solid #fff;}
+.toggle_menu{background: url('image/icon/arrow.png'); height: 27px; width:21px; background-position: -18px 0px; background-repeat:no-repeat; transition: all 200ms ease-in-out;}
+
+.create_story_icoon {
+cursor: pointer;
+font-size: 18px;
+margin-left: 12px;
+color:#C0BEBE;border: 1px solid rgb(238, 238, 238);}
+@media (max-width: 400px) {
+  /*.evrystry_logo_width {width: 37%;}*/
+  .evrystry_logo_width {  width: 58%;padding-left: 0px;padding-right: 0px; margin-top:2px;}
+  .evrystry_logo_width img{height:26px; margin-left: 32px;}
+  /*.fb_create_Story_width {width: 46%;}*/
+  .fb_create_Story_width {width: 20%;padding-right: 0px;float: right;}
+}
+
+   </style>
+    <script>
+$( document ).ready(function() {	
+  $(function() {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme"
+    ];
+    $( "#tags" ).autocomplete({
+      source: availableTags
+    });
+  });
+
+
+$("#menu" ).click(function() {
+  $('.hidden_div').toggleClass('opendiv');
+  $('.warpper, .whole-doc').toggleClass('opendiv');
+  $('.navbar-default').toggleClass('open_div');
+
+  //$('.navbar-default, .warpper, .whole-doc').toggleClass('open_div');
+  //$('.navbar-default, .whole-doc').animate({'left':'80%'},300);
+  $('.footer_row').hide();
+});
+
+$('.right_arrow').click(function(){
+  $(this).hide();
+  $('.left_arrow').show();
+  $('body').css('overflow-y', 'hidden');
+  $('html').css('overflow', 'hidden');
+});
+
+$('.left_arrow').click(function(){
+  $(this).hide();
+  $('.right_arrow').show();
+  $('body').css('overflow-y', 'auto');
+  $('html').css('overflow', 'scroll');
+});
+
+/*$('body').on('click', '.rahul', function(){
+  $('.toggle_menu').css('background-position', '-18px 0px');
+});*/
+
+$('body').click(function(){
+  
+//alert(width);
+});
+$(window).resize(function(){
+  var width = $(window).width();
+if(width>970){
+  //$('.whole-doc').removeClass('open_div');
+  $('.open_div').css('position', 'relative');
+  $('.whole-doc').css('left', '0');
+  $('.hidden_div').removeClass('opendiv');
+  $('.hidden_div').css('display', 'none');
+}
+});
+  
+
+//consol.log($(window).width());
+});
+
+  </script>
+  
+</head>
+
+<body>
+  <div class="hidden_div" style="background: #fff; border-top: 1px solid #718FC8;">
+    <div class="row visible-xs visible-sm" style="margin-left:0px; margin-right:0px;">
+      <div class="col-lg-12" style="padding-left:30px; padding-top:10px; padding-bottom:10px;">
+        <a href"#"><img src="image/logoamazing.png" style="height:26px;"></a>
+      </div>
+       <div class="col-xs-12" style="padding-left:15px;">
+          <div class="input-group">
+             <input type="search" class="form-control radius" placeholder="Search...">
+             <span class="input-group-addon radius"><i class="fa fa-search"></i></span>
+          </div>
+       </div>
+       
+       <div class="col-xs-12 list-group" style="margin-bottom:0px; padding-left:15px;" >
+          
+          <a href="#" class="list-group-item radius" style="border-radius: 0px;;color:#000; font-size:17px;padding: 5px 15px;border-bottom: 2px solid #fff;border-top: 2px solid #fff;"> 
+               Happy Login </a>
+          <a href="#" class="list-group-item radius create_story_xs" style="color:#000; font-size:17px;">
+               Create story </a>
+       </div>
+
+       <div class="col-xs-12 category_title_xs">
+           <span style="padding-left:15px; color:#fff;">Categories</span>
+       </div>
+       
+       <div class="col-xs-12 list-group navigation" style="margin-top:2px; padding-left:15px;">
+              
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Unbelievable Stories</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Creative</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">People</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Technology</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">History</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Photography</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Nature</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Travel & Adventure</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Lifestyle</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Health & Fitness</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Health & Fitness 1</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Health & Fitness 2</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Health & Fitness 3</a>
+                  <a href="#" class="list-group-item" style="border-radius: 0px;">Health & Fitness 4</a>
+            
+       </div>
+   </div>
+  </div>
+  <div class="whole-doc">
+<div class="navbar navbar-default " style="padding-top:8px; padding-bottom:10px; height:52px;z-index:99999">
+        <div class="container">
+          <div class="row">
+          <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 dropdown">
+            <a href="#" class="dropdown-toggle nav_link visible-lg visible-md" data-toggle="dropdown" style="border-right:0px;"> 
+              <i class="fa fa-bars" style="font-size:17px;"></i> Categories <b class="caret"></b></a>
+
+              <span id="menu" class="visible-xs visible-sm " href="#menu">
+                <!-- <i class="fa fa-th-list Categories_icoon"></i> -->
+                <!-- <img src="image/icon/right-arrow1.png" class="right_arrow"> -->
+                <!-- <img src="image/icon/left-arrow1.png" class="left_arrow" style="display:none;"> -->
+                <i class="fa fa-angle-double-right right_arrow" style="padding: 1px 9px;cursor: pointer;font-size: 28px;color:#C0BEBE;display: inline-block;border: 1px solid rgb(238, 238, 238);"></i>
+                <i class="fa fa-angle-double-left left_arrow" style="display:none; padding: 1px 9px;cursor: pointer;font-size: 28px;color:#C0BEBE;border: 1px solid rgb(238, 238, 238);"></i>
+              </span>
+           <!-- <div class="visible-xs dropdown-toggle"  data-toggle="dropdown"><i class="fa fa-bars Categories_icoon"></i></div> -->
+      </div>
+          <div class="col-lg-6 col-md-6 col-sm-5 col-xs-8 evrystry_logo_width text-center"><img src="image/logoamazing.png" /></div>
+          <div class="col-lg-3 col-md-4 col-sm-5 col-xs-2 fb_create_Story_width" style="padding-left:0px; padding-right:0px;">
+           <ul class="list-inline list-unstyled pull-right" style="margin-bottom:0px;">
+              <li><a href="#" class="nav_link visible-lg visible-md" data-toggle="modal" data-target="#myModal" style="padding-top:0px;"><i class="fa fa-plus-circle"></i> Create Story</a> 
+                 <i class="fa fa-pencil-square-o create_story_icoon visible-xs visible-sm"></i>
+                 
+              </li>
+              <li class="user_icon dropdown"><a href="#" class="dropdown-toggle visible-lg visible-md" data-toggle="dropdown">
+              <img src="image/junaid.jpg" style="height:24px; width:30px;" /> Abhishek <b class="caret"></b>
+              <!--<div class="pull-left"><img src="image/junaid.jpg" alt="" /></div> <ul><li>abhishek <b class="caret"></b></li></ul>-->
+              </a>
+                  <ul class="list-unstyled dropdown-menu evry_user_dropdown" style="border-radius:0px; border:none; top: 36px; padding:0px; margin:0px;">
+                    <li><a href="#"><i class="fa fa-book fa-fw"></i> My Profile</a></li>
+                    <li><a href="#"><i class="fa fa-plus fa-fw"></i> Submit Post</a></li>
+                    <li><a href="#"><i class="fa fa-picture-o fa-fw"></i> My Post</a></li>
+                    <li><a href="#"> <i class="fa fa-cog fa-fw"></i> Setting</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#"><i class="fa fa-sign-out fa-fw"></i> Log Out</a></li>
+                  </ul>
+                
+              </li>
+
+           </ul>
+           <style type="text/css">
+           	.evry_user_dropdown>li>a:hover, .evry_user_dropdown>li>a:focus{background:#718FCB; color: #fff;}
+			.evry_user_dropdown>li>a{padding: 5px 20px;}
+           </style>
+           
+        </div>
+      </div>
+     	</div>
+     </div>
+
+
+    
+      
+   <!-- --------------------------------------------latest story ------------------------------------------------ -->     
+   <div class="container warpper"> <!-- container div  start-->
+       
+        <div class="row"><!--row div start-->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery"><!--part 1st of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629438_2.jpg" /></a>
+                      <div class="share_widget" style="height: 40px;background: #fff; z-index:999;position: absolute;bottom: 0; right:0;width: 210px; display:block; border-top-left-radius:4px; border-top-right-radius:4px;">
+                      <ul class="list-unstyled list-inline">
+                      	<li><a href="#"><i class="fa fa-facebook-square" style="color:#3b5998;"></i> Share </a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" style="color:#9AE4E8"></i> Tweet</a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square" style="color:#d34836"></i> Share </a></li>
+                      </ul>
+
+                      </div>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                       
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                       <footer>
+                       
+                              <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                             
+                        </footer>
+               </section>
+           </div><!--part 1st of the row finish-->
+           
+           
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery"><!--part 2nd of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399632182_1.jpg" /></a>
+                      <div class="share_widget" style="height: 40px;background: #fff; z-index:999;position: absolute;bottom: 0; right:0;width: 210px; display:block; border-top-left-radius:4px; border-top-right-radius:4px;">
+                      <ul class="list-unstyled list-inline">
+                      	<li><a href="#"><i class="fa fa-facebook-square" style="color:#3b5998;"></i> Share </a></li>
+                        <li><a href="#"><i class="fa fa-twitter-square" style="color:#9AE4E8"></i> Tweet</a></li>
+                        <li><a href="#"><i class="fa fa-google-plus-square" style="color:#d34836"></i> Share </a></li>
+                      </ul>
+
+                      </div>
+                   </div>
+               		   <h2 class="story_title">
+                       	<a href="#">Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a>
+                       </h2> 
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                       <footer>
+                             
+                              <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                             </div><!-- icons div ... finish-->
+                        </footer>
+               </section>
+           </div><!--part 2nd of the row finish-->
+
+
+
+			<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery"> <!--part 3rd of the row  start-->
+                 <div class="row home_social_btn_margin ">
+                    <div class="col-lg-12 col-xs-12 home_social_subscribe">
+                         <div class="social_botton">
+                             <a class="social_link visible-lg visible-md visible-sm" href="#"> <img src="image/facebook.png" /></a>
+                             <div style="clear:both;"></div>
+                             <div class="fblike_btn_wrapper">
+                             <div class="fb-like" data-href="https://developers.facebook.com/docs/plugins/" data-layout="button" data-action="like" data-show-faces="false" data-share="false"></div>
+                             </div>
+                         </div>
+                         
+                         <div class="social_botton">
+                             <a class="social_link visible-lg visible-md visible-sm" href="#"> <img src="image/google.png"/></a>
+                             
+                             <!-- Place this tag where you want the widget to render. -->
+                             	<div class="gplus_btn_wrapper">
+                                    <div class="g-follow" data-annotation="none" data-height="15" 
+                                    data-href="//plus.google.com/u/0/104657152051891204025"  data-rel="author"></div>
+                                </div>
+                                    <!-- Place this tag after the last widget tag. -->
+                                    <script type="text/javascript">
+                                      window.___gcfg = {lang: 'en-GB'};
+                                    
+                                      (function() {
+                                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                        po.src = 'https://apis.google.com/js/platform.js';
+                                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                                      })();
+                                    </script>
+                         </div>
+                         <div class="social_botton" style="margin-right:0px;">
+                             <a class="social_link visible-lg visible-md visible-sm" href="#"> <img src="image/tweet.png" /></a>
+                         <div class="twit_btn_wrapper">
+                             <a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+						 </div>
+                         </div>
+                <div class="well radius" id="subdcribe_email"><!--well classs div start-->
+                  <p><strong>GET MORE STUFF LIKE THIS IN YOUR INBOX!</strong></p>
+                  <p class="get_newsletter">Sign up for our daily email newsletter to get more interesting stuffs. </p><br />
+                   <label class="sr-only"> Enter your email </label>
+                   <input type="email" class="form-control radius" id="exampleInputEmail1" placeholder="Enter email"><br />
+                      <div class="row" style="margin-top:12px"> <!--subscribe button  start-->
+                           <div class="col-lg-8" style="margin:auto; float:none">
+                           <a href="#" class="btn btn-danger btn-block btn-lg radius">Subscribe</a>
+                           </div>
+                     </div><!--subscribe button  finish-->
+              </div><!--well classs div finish-->
+                    </div>
+               </div>
+                   <!--<div class="row">
+                       <div class="col-lg-12">
+                   		<img class="img-responsive img-thumbnail" src="image/images (1).jpg" />
+                        </div>
+                   </div>-->
+                   
+        </div> <!--part 3rd of the row finish -->
+   
+
+       
+  
+   
+   <!--===========================================================2nd row ============================================================================-->
+   
+  
+      
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 1st of the row  start-->
+                <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1397896067_1.jpg" /></a>
+                      <div class="share_widget" style="height: 100px;background: rgba(5, 5, 5, 0.42);z-index:999;position: absolute;bottom: 0;width: 100%; display:block;"></div>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                            </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 1st of the row finish-->
+           
+           
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 2nd of the row  start-->
+                <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1390392226_1.jpg" /></a>
+                      <div class="share_widget" style="height: 100px;background: rgba(5, 5, 5, 0.42);z-index:999;position: absolute;bottom: 0;width: 100%; display:block;"></div>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                                <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 2nd of the row finish-->
+
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery"><!--part 3rd of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629979_2.jpg" /></a>
+                      <div class="share_widget" style="height: 100px;background: rgba(5, 5, 5, 0.42);z-index:999;position: absolute;bottom: 0;width: 100%; display:block;"></div>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 3rd of the row finish-->
+           
+        
+
+
+  <!--===========================================================3rd row ==========================================================================-->
+   
+  
+      
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery"><!--part 3rd of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" style="position:relative;">
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399821546_1.jpg" /></a>
+                      <div class="share_widget" style="height: 100px;background: rgba(5, 5, 5, 0.42);z-index:999;position: absolute;bottom: 0;width: 100%; display:none;"></div>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div>
+            
+           
+           
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 2nd of the row  start-->
+                <section class="clearfix section">
+                   <div class="gallery_image_section" >
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629809_4.jpg" /></a>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                                <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 2nd of the row finish-->
+
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 3rd of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" >
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629807_2.jpg" /></a>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 3rd of the row finish-->
+           
+       
+
+
+
+
+  <!--===========================================================4th row ==================================================================================-->
+   
+  
+     
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 1st of the row  start-->
+                <section class="clearfix section">
+                   <div class="gallery_image_section" >
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629622_1.jpg" /></a>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                            </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 1st of the row finish-->
+           
+           
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 2nd of the row  start-->
+                <section class="clearfix section">
+                   <div class="gallery_image_section" >
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1399629437_1.jpg" /></a>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                                <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 2nd of the row finish-->
+
+
+
+        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 home-gallery" ><!--part 3rd of the row  start-->
+               <section class="clearfix section">
+                   <div class="gallery_image_section" >
+                      <a href="#"> <img class="img-responsive" style="margin:auto" src="image/tss_1393138307_1.jpg" /></a>
+                   </div>
+               		   <h2 class="story_title"><a href="#">
+                       Trust Me When I Say You're Gonna Want To See What This Epic Friendship Trio Does. OMG!</a></h2>
+                       
+                        
+                       <p class="story_description"> orem  printer took a galley of type and scrambled it to make a type 
+                        specimen book. </p>
+                        
+                        
+                        
+                       <footer>
+                       
+                               <div class="home_meta" style="padding-left:12px"><!-- icons div ... start-->
+                                  <ul class="list-unstyled list-inline">
+                                      <li><i class="fa fa-eye img-circle eyes_icon"></i> <span >12402</span> </li>
+                                       <li class="img_number"><i class="fa fa-picture-o img-circle eyes_icon"></i> <span >20</span> </li>
+                                       <li><i class="fa fa-calendar"></i> <span >08 May,2014</span></li>
+                                       <li class="gallery_name pull-right"> <i class="fa fa-bookmark"></i> <span> Cartoon</span></li>
+                                   </ul>
+                              </div><!-- icons div ... finish-->
+                       
+                        	
+                        </footer>
+                </section>
+           </div><!--part 3rd of the row finish-->
+           
+        </div> <!-- row div  finish-->
+
+
+
+
+
+
+ </div><!-- container div  finish-->
+ 
+ <!-----------------------------------------------------lode more galleries -------------------------------------------------------------------------------->
+
+ <div class="container load_more_container">
+        	 <div class="row">
+             		<div class="col-lg-9" style="margin:auto; float:none">
+                    	<div class="load_more">
+                        	<div style="padding-top:8px;">
+                        	    <strong>Load More Galleries</strong>
+                            </div>
+                        </div>
+                    </div>
+             </div>
+        </div>
+  <!--------------------------------------------------------------------------footer------------------------------------------------------------------------------------------------>
+
+		
+            
+            <div class="footer footer_row">
+            	<div class="container">
+                	<div class="row">
+                        <div class="col-lg-9 footer_padding_top">
+                            <ul class="list-unstyled list-inline">
+                                <li><a href="#" style="color:#000"> About</a></li> <span class="text-muted">|</span>
+                                <li><a href="#" style="color:#000"> Privacy Policy</a></li> <span class="text-muted">|</span>
+                                <li><a href="#" style="color:#000"> Terms of use</a></li> <span class="text-muted">|</span>
+                                <li><a href="#" style="color:#000"> Contact us</a></li>
+                            </ul>
+                       </div>
+                    <div class="col-lg-3 text-muted footer_padding_top">
+                         <p>Vatsana Technologies © 2013</p>
+                     </div>
+                    </div>
+                </div>
+            </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+      </div>
+      <div class="modal-body">
+<a href="#" style="display: block;height: 53px;border: 1px solid #00007e;border-radius: 4px;background-color: #3967b2;"> <div class="facebook_icon_login" style=""> <i class="fa fa-facebook"></i></div> <div class="facebook_btn_login" style=""> Sign up with facebook</div> </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+$(".navbar-header button").click(function(){
+	$(".navbar-default").toggleClass('navbar-fixed-top');
+});
+
+/*$(".home-gallery").mouseenter(function(){
+	$(this).find(".share_widget").show();
+});
+$(".home-gallery").mouseleave(function(){
+	$(this).find(".share_widget").hide();
+});*/
+
+</script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				$( '#ri-grid' ).gridrotator( {
+					rows		: 3,
+					columns		: 20,
+					animType	: 'fadeIn',
+					animSpeed	: 1000,
+					interval	: 600,
+					step		: 1,
+					w320		: {
+						rows	: 3,
+						columns	: 4
+					},
+					w240		: {
+						rows	: 3,
+						columns	: 4
+					}
+				} );
+			
+			});
+		</script>
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+<style type="text/css">
+</style>
+</body>
+</html>
+ 

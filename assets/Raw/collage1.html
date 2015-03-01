@@ -1,0 +1,276 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+ <script src="js/jquery-1.10.2.min.js" type="text/javascript"></script>
+ 	<!--<link href="js/jquery-ui/jquery-ui.min.css" rel="stylesheet" type="text/css" />-->
+<!--Autocomplete-->
+
+  
+<!--Autocomplete-->
+ <!-- -->
+    <script type="text/javascript" src="js/modernizr.custom.26633.js"></script>
+ <!-- -->
+<noscript>
+</noscript>
+<!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="css/fallback.css" />
+<![endif]-->
+<style type="text/css">
+/*collage start*/
+
+.ri-grid{
+	margin: 0px auto 0px;
+	position: relative;
+	height: auto;
+}
+
+.ri-grid ul {
+	list-style: none;
+	display: block;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+/* Clear floats by Nicolas Gallagher: http://nicolasgallagher.com/micro-clearfix-hack/ */
+
+.ri-grid ul:before,
+.ri-grid ul:after{
+	content: '';
+    display: table;
+}
+
+.ri-grid ul:after {
+    clear: both;
+}
+
+.ri-grid ul {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+} 
+
+.ri-grid ul li {
+	-webkit-perspective: 400px;
+	-moz-perspective: 400px;
+	-o-perspective: 400px;
+	-ms-perspective: 400px;
+	perspective: 400px;	
+	margin: 0;
+	padding: 0;
+	float: left;
+	position: relative;
+	display: block;
+	overflow: hidden;
+	background: #000;
+}
+
+.ri-grid ul li a{
+	display: block;
+	outline: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+	-o-transform-style: preserve-3d;
+	-ms-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	background-size: 100% 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-color: #333;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	opacity:0.5;
+	}
+
+/* Grid wrapper sizes */
+.ri-grid-size-1{
+	width: 55%;
+}
+.ri-grid-size-2{
+	width: 100%;
+}
+.ri-grid-size-3{
+	width: 100%;
+	margin-top: 0px;
+}
+
+/* Shadow style */
+.ri-shadow:after,
+.ri-shadow:before{
+	content: "";
+	position: absolute;
+	z-index: -2;
+	bottom: 15px;
+	left: 10px;
+	width: 50%;
+	height: 20%;
+	max-width: 300px;
+	max-height: 100px;
+	box-shadow: 0 15px 10px rgba(0, 0, 0, 0.7);
+	-webkit-transform: rotate(-3deg);
+	-moz-transform: rotate(-3deg);
+	-ms-transform: rotate(-3deg);
+	-o-transform: rotate(-3deg);
+	transform: rotate(-3deg);
+}
+.ri-shadow:after{
+	right: 10px;
+	left: auto;
+	-webkit-transform: rotate(3deg);
+	-moz-transform: rotate(3deg);
+	-ms-transform: rotate(3deg);
+	-o-transform: rotate(3deg);
+	transform: rotate(3deg);
+}
+
+.ri-grid-loading:after,
+.ri-grid-loading:before{
+	display: none;
+}
+
+.ri-loading-image{
+	display: none;
+}
+
+.ri-grid-loading .ri-loading-image{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	left: 50%;
+	margin: 100px 0 0 -15px;
+	display: block;
+}
+
+/*collage end*/
+
+</style>
+</head>
+
+<body>
+
+<div id="ri-grid" class="ri-grid ri-grid-size-2">
+					<ul>
+						<li><a href="#"><img class="blur" src="images/medium/1.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/2.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/3.jpg" /></a></li>
+						<li><a href="#"><img src="images/medium/4.jpg" class="blur"/></a></li>
+						<li><a href="#"><img src="images/medium/5.jpg" class="blur"/></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/6.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/7.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/8.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/9.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/10.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/11.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/12.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/13.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/14.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/15.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/16.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/17.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/18.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/19.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/20.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/21.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/22.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/23.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/24.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/25.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/26.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/27.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/28.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/29.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/30.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/31.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/32.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/33.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/34.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/35.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/36.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/37.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/38.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/39.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/40.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/41.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/42.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/43.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/44.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/45.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/46.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401625705_2.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401625704_1.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624213_7.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624213_7.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624212_6.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624211_5.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624210_4.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624209_3.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624209_3.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624209_2.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624208_1.jpg" /></a></li>
+						<li><a href="#"><img src="images/medium/tss_1402734352_1.jpg" class="blur"/></a></li>
+						<li><a href="#"><img src="images/medium/tss_1402734445_1.jpg" class="blur"/></a></li>
+						<li><a href="#"><img src="images/medium/tss_1402734446_2.jpg" class="blur"/></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1402734447_3.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1402734449_5.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1402734713_1.jpg" /></a></li>
+						<li><a href="#"><img src="images/medium/tss_1402734720_9.jpg" class="blur"/></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401623954_1.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/tss_1401624021_1.jpg" /></a></li>
+
+						<li><a href="#"><img src="images/medium/20.jpg" class="blur"/></a></li>
+						<li><a href="#"><img src="images/medium/21.jpg" class="blur"/></a></li>
+						<li><a href="#"><img src="images/medium/22.jpg" class="blur"/></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/23.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/24.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/25.jpg" /></a></li>
+						<li><a href="#"><img src="images/medium/26.jpg" class="blur"/></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/27.jpg" /></a></li>
+						<li><a href="#"><img class="blur" src="images/medium/28.jpg" /></a></li>
+
+					</ul>
+				</div>
+
+
+</script>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.gridrotator.js"></script>
+		<script type="text/javascript">	
+			$(function() {
+			
+				$( '#ri-grid' ).gridrotator( {
+					rows		: 3,
+					columns		: 20,
+					animType	: 'fadeIn',
+					animSpeed	: 1000,
+					interval	: 600,
+					step		: 1,
+					w320		: {
+						rows	: 3,
+						columns	: 4
+					},
+					w240		: {
+						rows	: 3,
+						columns	: 4
+					}
+				} );
+			
+			});
+		</script>
+    <script type="text/javascript" src="js/jquery-ui/jquery-ui.min.js"></script>
+
+</body>
+</html>
